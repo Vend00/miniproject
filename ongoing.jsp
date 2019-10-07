@@ -1,3 +1,6 @@
+<%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@page import="java.util.*,java.sql.*"%>
+
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -294,7 +297,25 @@
                 <!-- market value area end -->
                 <!-- row area start -->
                 <div id="wrapper">
-                        <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+                        <style type="text/css">
+                            .th-sm a
+                            {
+                               text-decoration: none;
+        
+                            }
+                            .th-sm button
+                            {
+                                background: none;
+                                border: none;
+                            }
+                            table.sortable thead {
+                                background-color:#eee;
+                                color:#666666;
+                                font-weight: bold;
+                                cursor: default;
+                            }
+                            </style> 
+                        <table id="dtBasicExample" class="table table-striped table-bordered table-sm sortable" cellspacing="0" width="100%">
                                 <thead>
                                   <tr>
                                     <th class="th-sm">Order ID
@@ -310,154 +331,69 @@
                                   </tr>
                                 </thead>
                                 <tbody>
-                                  <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
-                                    <td>
-                                        <button type="button" class="btn btn-primary"><i class="fa fa-check"></i></button>
-                                      <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Garrett Winters</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>63</td>
-                                    <td>2011/07/25</td>
-                                    <td>
-                                        <button type="button" class="btn btn-primary"><i class="fa fa-check"></i></button>
-                                      <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Ashton Cox</td>
-                                    <td>Junior Technical Author</td>
-                                    <td>San Francisco</td>
-                                    <td>66</td>
-                                    <td>2009/01/12</td>
-                                    <td>
-                                        <button type="button" class="btn btn-primary"><i class="fa fa-check"></i></button>
-                                      <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Cedric Kelly</td>
-                                    <td>Senior Javascript Developer</td>
-                                    <td>Edinburgh</td>
-                                    <td>22</td>
-                                    <td>2012/03/29</td>
-                                    <td>
-                                        <button type="button" class="btn btn-primary"><i class="fa fa-check"></i></button>
-                                      <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Airi Satou</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>33</td>
-                                    <td>2008/11/28</td>
-                                    <td>
-                                        <button type="button" class="btn btn-primary"><i class="fa fa-check"></i></button>
-                                      <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Brielle Williamson</td>
-                                    <td>Integration Specialist</td>
-                                    <td>New York</td>
-                                    <td>61</td>
-                                    <td>2012/12/02</td>
-                                    <td>
-                                        <button type="button" class="btn btn-primary"><i class="fa fa-check"></i></button>
-                                      <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Herrod Chandler</td>
-                                    <td>Sales Assistant</td>
-                                    <td>San Francisco</td>
-                                    <td>59</td>
-                                    <td>2012/08/06</td>
-                                    <td>
-                                        <button type="button" class="btn btn-primary"><i class="fa fa-check"></i></button>
-                                      <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                                    </td>
-                                  </tr>
-                                    <td>Lael Greer</td>
-                                    <td>Systems Administrator</td>
-                                    <td>London</td>
-                                    <td>21</td>
-                                    <td>2009/02/27</td>
-                                    <td>
-                                        <button type="button" class="btn btn-primary"><i class="fa fa-check"></i></button>
-                                      <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Jonas Alexander</td>
-                                    <td>Developer</td>
-                                    <td>San Francisco</td>
-                                    <td>30</td>
-                                    <td>2010/07/14</td>
-                                    <td>
-                                        <button type="button" class="btn btn-primary"><i class="fa fa-check"></i></button>
-                                      <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Shad Decker</td>
-                                    <td>Regional Director</td>
-                                    <td>Edinburgh</td>
-                                    <td>51</td>
-                                    <td>2008/11/13</td>
-                                    <td>
-                                        <button type="button" class="btn btn-primary"><i class="fa fa-check"></i></button>
-                                      <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Michael Bruce</td>
-                                    <td>Javascript Developer</td>
-                                    <td>Singapore</td>
-                                    <td>29</td>
-                                    <td>2011/06/27</td>
-                                    <td>
-                                        <button type="button" class="btn btn-primary"><i class="fa fa-check"></i></button>
-                                      <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Donna Snider</td>
-                                    <td>Customer Support</td>
-                                    <td>New York</td>
-                                    <td>27</td>
-                                    <td>2011/01/25</td>
-                                    <td>
-                                        <button type="button" class="btn btn-primary"><i class="fa fa-check"></i></button>
-                                      <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                                    </td>
-                                  </tr>
+                                    <script src="sorttable.js"></script>
+                                    <%
+                                        try{
+                                            Class.forName("com.mysql.jdbc.Driver");
+                                            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/miniproject2","root","root");
+                                            PreparedStatement pst = conn.prepareStatement("select * from userchooses");
+                                            ResultSet rs = pst.executeQuery();
+                                            while(rs.next())
+                                            {
+                                              int ordid=rs.getInt("orderid");
+                                              String prid=rs.getString("proid");
+                                              int qua=rs.getInt("quantity");
+                                              String ordate=rs.getString("order_placed");
+                                              String reqdate=rs.getString("reqbydate");
+                                              pst=conn.prepareStatement("select name from productdetails where productid=?");
+                                              pst.setString(1, prid);
+                                              ResultSet rsx=pst.executeQuery();
+                                              String pname="";
+                                              if(rsx.next())
+                                              {
+                                                pname=rsx.getString("name");
+                                              }
+                                              %>
+                                             <tr>
+                                                  <td>
+                                                      <%
+                                                        out.print(ordid);
+                                                       %>
+                                                  </td>
+                                                  <td>
+                                                      <%
+                                                        out.print(pname);
+                                                       %>
+                                                  </td>
+                                                  <td>
+                                                      <%
+                                                        out.print(qua);
+                                                       %>
+                                                  </td>
+                                                  <td>
+                                                      <%
+                                                        out.print(ordate);
+                                                       %>
+                                                  </td>
+                                                  <td>
+                                                      <%
+                                                        out.print(reqdate);
+                                                       %>
+                                                  </td>
+                                                  <td>
+                                                    <button type="button" class="btn btn-primary"><i class="fa fa-check"></i></button>
+                                                    <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                                                   </td>
+                                            </tr>
+                                              <%
+                                            }
+                                        }
+                                        catch (Exception e){
+                                            System.out.print(e);
+                                            e.printStackTrace();    
+                                        }
+                                    %>
                                 </tbody>
-                                <tfoot>
-                                  <tr>
-                                    <th>Name
-                                    </th>
-                                    <th>Position
-                                    </th>
-                                    <th>Office
-                                    </th>
-                                    <th>Age
-                                    </th>
-                                    <th>Start date
-                                    </th>
-                                    <th>Salary
-                                    </th>
-                                  </tr>
-                                </tfoot>
                             </table> 
             </div>
         </div>
